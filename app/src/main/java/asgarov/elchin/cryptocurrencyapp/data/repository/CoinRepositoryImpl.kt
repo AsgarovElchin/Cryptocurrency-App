@@ -25,7 +25,7 @@ class CoinRepositoryImpl @Inject constructor(
         return api.getCoinById(coinId).toCoinDetail()
     }
 
-    fun getCoinsFlow(): Flow<Resource<List<Coin>>> = flow {
+    override fun getCoinsFlow(): Flow<Resource<List<Coin>>> = flow {
         try {
             emit(Resource.Loading<List<Coin>>())
             emit(Resource.Success<List<Coin>>(getCoins()))
@@ -36,7 +36,7 @@ class CoinRepositoryImpl @Inject constructor(
         }
     }
 
-    fun getCoinDetailFlow(coinId: String): Flow<Resource<CoinDetail>> = flow {
+    override fun getCoinDetailFlow(coinId: String): Flow<Resource<CoinDetail>> = flow {
         try {
             emit(Resource.Loading<CoinDetail>())
             emit(Resource.Success<CoinDetail>(getCoinById(coinId)))
