@@ -1,4 +1,4 @@
-package asgarov.elchin.cryptocurrencyapp.data.repository.model
+package asgarov.elchin.cryptocurrencyapp.domain.model
 
 data class Coin(
     val id: String,

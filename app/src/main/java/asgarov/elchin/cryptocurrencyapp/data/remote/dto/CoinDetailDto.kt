@@ -1,6 +1,6 @@
 package asgarov.elchin.cryptocurrencyapp.data.remote.dto
 
-import asgarov.elchin.cryptocurrencyapp.data.repository.model.CoinDetail
+import asgarov.elchin.cryptocurrencyapp.domain.model.CoinDetail
 
 data class CoinDetailDto(
     val description: String,

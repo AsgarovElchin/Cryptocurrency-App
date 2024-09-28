@@ -1,11 +1,12 @@
 package asgarov.elchin.cryptocurrencyapp.domain.repository
 
-import asgarov.elchin.cryptocurrencyapp.data.remote.dto.CoinDetailDto
-import asgarov.elchin.cryptocurrencyapp.data.remote.dto.CoinDto
+
+import asgarov.elchin.cryptocurrencyapp.domain.model.Coin
+import asgarov.elchin.cryptocurrencyapp.domain.model.CoinDetail
 
 interface CoinRepository {
 
-    suspend fun getCoins(): List<CoinDto>
+    suspend fun getCoins(): List<Coin>
 
-    suspend fun getCoinById(coinId: String): CoinDetailDto
+    suspend fun getCoinById(coinId: String): CoinDetail
 }
