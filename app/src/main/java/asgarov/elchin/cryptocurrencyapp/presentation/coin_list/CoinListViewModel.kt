@@ -1,5 +1,6 @@
 package asgarov.elchin.cryptocurrencyapp.presentation.coin_list
 
+import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -30,6 +31,7 @@ class CoinListViewModel @Inject constructor(
         getCoinsUseCase().onEach { result ->
             when (result) {
                 is Resource.Success -> {
+                    Log.d("data","$result")
 
                     _state.value = CoinListState(coins = result.data ?: emptyList())
                 }

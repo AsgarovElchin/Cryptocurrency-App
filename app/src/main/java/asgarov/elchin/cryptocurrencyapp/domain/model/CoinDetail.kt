@@ -1,4 +1,4 @@
-package asgarov.elchin.cryptocurrencyapp.data.repository.model
+package asgarov.elchin.cryptocurrencyapp.domain.model
 
 import asgarov.elchin.cryptocurrencyapp.data.remote.dto.TeamMember
 
